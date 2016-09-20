@@ -5,23 +5,6 @@ echo "2) Staging"
 echo "3) Production"
 read -p "Please choose the server that you are releasing this branch to 1, 2 or 3: " ENVIRONMENT
 
-# if [ "$ENVIRONMENT" = '1' ];
-#   then
-#   ENVIRONMENT="QA"
-# fi
-
-# if [ "$ENVIRONMENT" = '2' ];
-#   then
-#   ENVIRONMENT="STAGING"
-# fi
-
-# if [ "$ENVIRONMENT" = '3' ];
-#   then
-#   ENVIRONMENT="PRODUCTION"
-# fi
-
-# echo $ENVIRONMENT
-
 case $ENVIRONMENT in
    1) ENVIRONMENT='QA'
    ;;
