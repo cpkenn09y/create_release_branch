@@ -14,16 +14,30 @@ case $ENVIRONMENT in
    ;;
 esac
 
-echo $ENVIRONMENT
+echo "What is the name of this release?"
+echo "eg. 20160928-ReleaseV1.1.1"
+read -p " " RELEASE_NAME
 
-read -p "What is the version of the software? " VERSION
+# Storing original timezone
+ORIGINAL_TZ=$TZ
 
-DATE=`date +Y%yM%mD%d`
-RELEASE_PREFIX="ReleaseV"
+SPECIAL_DATE_FORMAT=`date +Y%yM%mD%d`
 
-COMMAND="git checkout -b $DATE-$RELEASE_PREFIX$VERSION-$ENVIRONMENT"
+# export TZ=America/New_York date
+export TZ=America/Los_Angeles date
 
-eval $COMMAND
+TIMESTAMP=`date +%Y%m%d%H%M%S`
+SHORT_TIMESTAMP=`date +%Y%m%d`
 
+NEW_BRANCH_NAME=$SHORT_TIMESTAMP-$RELEASE_NAME-$ENVIRONMENT-$TIMESTAMP
 
+COMMAND_CREATE_BRANCH="git checkout -b $NEW_BRANCH_NAME"
 
+eval $COMMAND_CREATE_BRANCH
+
+COMMAND_PUSH_BRANCH="git push origin $NEW_BRANCH_NAME"
+
+eval $COMMAND_PUSH_BRANCH
+
+# Reset to original TZ
+TZ=$ORIGINAL_TZ
