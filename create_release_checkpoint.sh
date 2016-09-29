@@ -25,7 +25,7 @@ case $ENVIRONMENT in
    ;;
 esac
 
-echo "What is the name of this release?"
+echo "What is the name of the original release?"
 echo "eg. 20160928-ReleaseV1.1.1"
 echo ""
 read -p "-> " RELEASE_NAME
