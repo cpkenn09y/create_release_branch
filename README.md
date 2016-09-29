@@ -3,7 +3,7 @@
 ###Sample alias for script
 alias create_release_checkpoint="~/scripts/create_release_checkpoint/create_release_checkpoint.sh"
 
-![alt tag](http://i.imgur.com/kKeRyv6.png)
+![alt tag](http://i.imgur.com/4kBKkNl.png)
 
 * change the name to 'create_release_checkpoint'
 * create the branch
