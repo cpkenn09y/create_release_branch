@@ -25,5 +25,5 @@
 * Put the following into your .bashrc
     * `alias create_release_checkpoint="~/scripts/create_release_checkpoint/create_release_checkpoint.sh"`
 
-### Example Execution on Oct 2016
+### Example Execution on 2016 Nov. 29
 ![alt tag](http://i.imgur.com/Ac65We4.png)
