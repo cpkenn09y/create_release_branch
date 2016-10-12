@@ -18,7 +18,7 @@
 
 ## When Deploying
 1. Use the newly created branch in green text
-* `bundle exec cap qa deploy BRANCH=<newly created branch>`
+* `bundle exec cap <environment> deploy BRANCH=<newly created branch>`
 
 ### Making an alias for this script
 
