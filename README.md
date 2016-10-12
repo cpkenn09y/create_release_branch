@@ -7,7 +7,7 @@
     * (ex: 20161001-ReleaseV1.1.1)
         * The aforementioned example was made on 2016 October 01.
 3. Creates a new branch
-    * "<original release name><environment><current timestamp>"
+    * \<original release name><environment><current timestamp>
 4. Pushes the branch to GitHub
 5. Jumps back onto the original branch you were on
 6. Deletes the newly created branch
