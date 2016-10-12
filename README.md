@@ -1,5 +1,10 @@
 # create_release_branch
 
+### Purpose:
+1. Creates a branch that acts as a checkpoint (think Mario) to save the current state of the code
+2. Allows this newly created checkpoint branch to be deployed to different environments
+3. Allows for version control when promoting code to different environments (ex: from QA to Staging to Production)
+
 ### What is does:
 
 1. Asks for the environment you will be deploying to (ex: QA, Staging, Production).
@@ -15,6 +20,21 @@
 
 ##### Note:
 * Uses Los Angeles timezone, so that all developers will apply the same timezone for timestamps
+
+### Promoting Approved Builds from One Environment to the Other
+1. Given the example of code from QA to Staging
+    * ssh onto the server
+    * cd into the root of your project (ex: /var/www/vhosts/navera.com/webapps/apps/rhino_dba)
+    * cat the `revisions.log` file
+    * copy the name of the branch currently on QA
+      * Note: it should be the bottom of the list
+    * open a new terminal tab
+      * navigate to the local repo of your project
+      * `git fetch origin <name of branch>`
+      * `git checkout <name of branch>`
+      * execute this script
+        * `create_release_checkpoint`
+      * deploy the newly created branch to Staging
 
 ## When Deploying
 1. Use the newly created branch in green text
