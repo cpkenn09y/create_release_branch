@@ -10,17 +10,26 @@ green='\033[0;32m'
 end=$'\e[0m'
 # colors END
 
-echo "1) QA "
-echo "2) Staging"
-echo "3) Production"
+echo "1a) QA "
+echo "1b) QA2"
+echo "2a) Staging"
+echo "2b) Staging2"
+echo "3a) Production"
+echo "3b) Production2"
 read -p "Please choose the server that you are releasing this branch to 1, 2 or 3: " ENVIRONMENT
 
 case $ENVIRONMENT in
-   1) ENVIRONMENT='QA'
+   1a) ENVIRONMENT='QA'
    ;;
-   2) ENVIRONMENT='Staging'
+   1b) ENVIRONMENT='QA2'
    ;;
-   3) ENVIRONMENT='Production'
+   2a) ENVIRONMENT='Staging'
+   ;;
+   2b) ENVIRONMENT='Staging2'
+   ;;
+   3a) ENVIRONMENT='Production'
+   ;;
+   3b) ENVIRONMENT='Production2'
    ;;
 esac
 
